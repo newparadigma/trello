@@ -4,7 +4,7 @@
 # Инструкция по установке
 1. Копируем docker-compose инструкцию:
 ```bash
-cp docker-compose-example.yml docker-compose.yml
+cp docker-compose.example.yml docker-compose.yml
 ```
 2. Строим контейнеры
 ```bash
