@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
-import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Login from './components/Login/Login';
-import Dashboard from './components/Dashboard/Dashboard';
-import Preferences from './components/Preferences/Preferences';
-
+import React from 'react'
+import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Login from './components/Login/Login'
+import Preferences from './components/Preferences/Preferences'
+import useToken from './components/Login/useToken'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
+import Main from './components/Main/Main'
 
 function App() {
 
-  const [token, setToken] = useState();
+  const { token, setToken } = useToken()
 
   if (!token) {
     return <Login setToken={setToken} />
@@ -16,15 +18,16 @@ function App() {
 
   return (
     <div className="wrapper">
-      <h1>Trello</h1>
+      <Header />
       <BrowserRouter>
         <Routes>
-          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/' element={<Main />} />
           <Route path='/preferences' element={<Preferences />} />
         </Routes>
       </BrowserRouter>
+      <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
