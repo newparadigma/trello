@@ -1,8 +1,32 @@
 import React from 'react'
 import style from './main.module.css'
+import logo from './../../img/logo.png'
+import { NavLink } from 'react-router-dom'
 
 export default function Main() {
-  return(
+
+  const logout = () => {
+    localStorage.clear()
+    window.location.reload()
+  }
+
+  return (<>
+    <div className={style.header}>
+      <div className={style.wrapper}>
+        <div className={style.logo}>
+          <img src={logo} alt='logo' />
+        </div>
+        <div className={style.href}>Возможности</div>
+        <div className={style.href}>Решения</div>
+        <div className={style.href}>Планы</div>
+        <div className={style.href}>Цены</div>
+        <div className={style.href}>Ресурсы</div>
+        <div className={style.href} onClick={logout}>Выйти</div>
+        <NavLink to='/boards'>
+        <button className={style.btn}>Перейти к вашим доскам</button>
+        </NavLink>
+      </div>
+    </div>
     <div className={style.bg}>
       <div className={style.content}>
         <div className={style.text}>
@@ -11,5 +35,7 @@ export default function Main() {
         </div>
       </div>
     </div>
+    <div className={style.footer}>FOOTER</div>
+  </>
   );
 }
