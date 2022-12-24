@@ -6,13 +6,18 @@ import { HandySvg } from 'handy-svg'
 import Ring from '../../../img/ring.svg'
 import Question from '../../../img/question.svg'
 import User from '../../../img/user.png'
+import { NavLink } from 'react-router-dom'
 
 
 const Header = () => {
   return (
     <div className={style.header}>
       <div className={style.wrapper}>
-        <div><img src={logo} alt='logo' /></div>
+        <div>
+          <NavLink to='/'>
+          <img src={logo}  alt='logo' />
+          </NavLink>
+        </div>
         <div className={style.ref}>
           <span className={style.text}>Рабочие пространства</span>
           <span><HandySvg src={DownImage} className={style.down} width='15' height='15' /></span>

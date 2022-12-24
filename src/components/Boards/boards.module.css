@@ -1,14 +1,14 @@
 .appWrapper {
     font-family: roboto, sans-serif;
-    padding-top: 1px;
+    padding-top: 0;
     margin: auto;
     display: grid;
     width: 100%;
     grid-template-areas:
         "header header header"
         "nav content content";
-    grid-template-rows: 60px 1fr;
-    grid-template-columns: 2fr 10fr;
+    grid-template-rows: 43px 1fr;
+    grid-template-columns: 260px 1fr;
 }
 
 .appContent {
