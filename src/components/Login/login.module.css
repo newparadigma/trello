@@ -12,5 +12,12 @@
 }
 
 .logo {
-    padding-bottom: 40px;
+    padding-bottom: 20px;
+}
+
+.registration {
+    background-color: green;
+    border: 1px solid grey;
+    border-radius: 4px;
+    color: #fff;
 }

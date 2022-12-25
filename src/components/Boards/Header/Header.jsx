@@ -14,33 +14,45 @@ const Header = () => {
     <div className={style.header}>
       <div className={style.wrapper}>
         <div>
-          <NavLink to='/'>
-          <img src={logo}  alt='logo' />
+          <NavLink to='/' >
+            <img src={logo} alt='logo' />
           </NavLink>
         </div>
         <div className={style.ref}>
-          <span className={style.text}>Рабочие пространства</span>
-          <span><HandySvg src={DownImage} className={style.down} width='15' height='15' /></span>
+          <div className={style.refWrapper}>
+            <span className={style.text}>Рабочие пространства</span>
+            <span><HandySvg src={DownImage} className={style.down} width='15' height='15' /></span>
+          </div>
         </div>
         <div className={style.ref}>
-          <span className={style.text}>Недавние</span>
-          <span><HandySvg src={DownImage} className={style.down} width='15' height='15' /></span>
+          <div className={style.refWrapper}>
+            <span className={style.text}>Недавние</span>
+            <span><HandySvg src={DownImage} className={style.down} width='15' height='15' /></span>
+          </div>
         </div>
         <div className={style.ref}>
-          <span className={style.text}>В избранном</span>
-          <span><HandySvg src={DownImage} className={style.down} width='15' height='15' /></span>
+          <div className={style.refWrapper}>
+            <span className={style.text}>В избранном</span>
+            <span><HandySvg src={DownImage} className={style.down} width='15' height='15' /></span>
+          </div>
         </div>
         <div className={style.ref}>
-          <span className={style.text}>Шаблоны</span>
-          <span><HandySvg src={DownImage} className={style.down} width='15' height='15' /></span>
+          <div className={style.refWrapper}>
+            <span className={style.text}>Шаблоны</span>
+            <span><HandySvg src={DownImage} className={style.down} width='15' height='15' /></span>
+          </div>
         </div>
         <div>
-          <button className={style.btn}>Создать</button>
+            <button className={style.btn}>Создать</button>
         </div>
         <span className={style.spacing}></span>
         <div><input className={style.search} type="text" placeholder='Поиск' /></div>
-        <span><HandySvg src={Ring} className={style.svg} width='25' height='25' /></span>
+        <div><span><HandySvg src={Ring} className={style.svg} width='25' height='25' /></span>
+        </div>
+        
+        <div></div>
         <span><HandySvg src={Question} className={style.svg} width='25' height='25' /></span>
+        <div></div>
         <span className={style.user}><img src={User} alt='user' /></span>
       </div>
     </div>

@@ -29,11 +29,10 @@
     font-size: 14px;
     padding-left: 20px;
     cursor: pointer;
+    line-height: 13px;
 }
 
 .down {
-    position: fixed;
-    top: 12px;
     padding-left: 5px;
     cursor: pointer;
 }
@@ -55,6 +54,16 @@
     cursor: pointer;
 }
 
+.btnWrapper {
+    display: flex;
+    padding: 5px;
+    background-color: red;
+}
+
+.btn:hover {
+    background-color: #298FC9;
+}
+
 .search {
     margin-top: -8px;
     width: 175px;
@@ -62,6 +71,10 @@
     background-color: #3384B3;
     border: none;
     border-radius: 5px;
+}
+
+.search:hover {
+    background-color: #298FC9;
 }
 
 .search::placeholder {
@@ -81,4 +94,15 @@
     padding-left: 0;
     padding-right: 5px;
     cursor: pointer;
+}
+
+.refWrapper {
+    display: flex;
+    padding: 5px;
+    /* background-color: #298FC9; */
+    border-radius: 4px;
+}
+
+.ref :hover {
+    background-color: #298FC9;
 }
